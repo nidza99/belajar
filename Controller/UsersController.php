@@ -22,7 +22,7 @@
                                 $this->request->data['User']['image'] = $file['name'];
                         }
                 }// end of tambahan			
-			$this->request->data['Log']['log'] = "penambahan user baru ".$this->request->data['User']['username'];
+			$this->request->data['Log'][0]['log'] = "penambahan user baru ".$this->request->data['User']['username'];
 				
 			if ($this->User->saveAssociated($this->request->data, array('deep'=>true))) {
 				
